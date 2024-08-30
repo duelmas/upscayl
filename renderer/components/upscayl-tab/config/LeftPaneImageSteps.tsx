@@ -215,6 +215,22 @@ function LeftPaneImageSteps({
         </button>
       </div>
 
+        {/* Add subfolder option */}
+        {batchMode && (
+          <div className="mt-2">
+            <label className="flex items-center space-x-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={subFolderBatch}
+                onChange={(e) => setSubFolderBatch(e.target.checked)}
+                className="form-checkbox"
+              />
+              <span>Include subfolders</span>
+            </label>
+          </div>
+        )}
+      </div>
+      
       {/* STEP 2 */}
       <div className="animate-step-in group flex flex-col gap-4">
         <div>
